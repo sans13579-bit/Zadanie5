@@ -1,0 +1,37 @@
+
+string start = "Начать";
+string apple = "яблоко";
+string random;
+
+Console.WriteLine("Для начала теста напишите 'Начать'");
+string a = Console.ReadLine();
+int resultStart = string.Compare(a, start);
+if (resultStart == 0) 
+{
+    Console.WriteLine("Напишите слово 'яблоко' с точностью до регистра");
+    string b = Console.ReadLine();
+    int resulapple = string.CompareOrdinal(b, apple);
+    if (resulapple == 0)
+    { 
+        Console.WriteLine("Напишите любое слово, где вторая буква 'а'");
+        random = Console.ReadLine();
+        char ch = 'а';
+        int indexOfChar = random.IndexOf(ch);
+        if (indexOfChar == 1) 
+        { 
+            Console.WriteLine("Напишите 'Я ем яблоко'");
+            string c = Console.ReadLine();
+            if(c.Contains(apple))
+            {
+                Console.WriteLine("Вы успешно прошли тест");
+            }
+            else { Console.WriteLine("Ошибка"); }
+        }
+        else { Console.WriteLine("Ошибка"); }
+    }
+    
+    
+    else { Console.WriteLine("Ошибка"); } 
+
+}
+else { Console.WriteLine("Ошибка"); }
